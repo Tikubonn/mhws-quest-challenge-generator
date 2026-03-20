@@ -15,11 +15,12 @@
       body {
         padding: 1rem;
         margin: 0;
-        background: #eee;
+        background: #f3f3f3;
         font-family: Arial, "BIZ UDGothic", sans-serif;
         font-size: 14px;
         font-weight: normal;
         line-height: 1.6;
+        color: #222;
       }
 
     </style>
@@ -27,8 +28,12 @@
   <body>
 
     <p>
-      ページ更新の度に新しいクエストチャレンジが生成されます。<br>
+      ページ更新の度に新しいクエスト・チャレンジが生成されます。<br>
       生成された画像は右クリックからコピーすることで Discord にそのまま貼り付けることができます。
+    </p>
+
+    <p>
+      ※画像を再抽選するには F5 キー等による画面更新を行ってください。
     </p>
 
     <img id="quest-background" src="img/background.jpg" width="0">
@@ -235,12 +240,12 @@
       ];
 
       WEAPONS.forEach((weapon) => {
-        all_challenges.push(new Challenge(weapon + "を担いで", 20, 0.25, ["weapon"], ["weapon"]));
+        all_challenges.push(new Challenge(`${weapon}で`, 20, 0.25, ["weapon"], ["weapon"]));
       });
 
       combination(WEAPONS, 2).forEach((weapons) => {
         let [weapon, weapon2] = weapons;
-        all_challenges.push(new Challenge(weapon + "もしくは" + weapon2 + "を担いで", 10, 0.5, ["weapon"], ["weapon"]));
+        all_challenges.push(new Challenge(`${weapon}・${weapon2}で`, 10, 0.5, ["weapon"], ["weapon"]));
       });
 
       WEAPON_CATEGORIES.forEach((weaponCategory) => {
@@ -252,19 +257,22 @@
         new Challenge("魚釣り(大物)を成功させつつ", 10, 0.25, [], ["arena"]),
         new Challenge("鉱石採掘もしつつ", 1, 1.0, [], ["arena"]),
         new Challenge("虫取りもしつつ", 1, 1.0, [], ["arena"]),
-        new Challenge("ハチミツ集めもしつつ", 1, 1.0, [], ["arena"]),
-        new Challenge("卵運びもしつつ", 10, 0.25, [], ["arena"]),
+        new Challenge("ハチミツ採取もしつつ", 1, 1.0, [], ["arena"]),
+        // new Challenge("卵運びもしつつ", 10, 0.25, [], ["arena"]),
         new Challenge("可能ならば捕獲狙いで", 10, 1.0, [], ["no_capture"]),
-        new Challenge("5分以内に", 20, 1.0, ["rta"], ["rta", "no_capture"]),
-        new Challenge("10分以内に", 10, 1.0, ["rta"], ["rta", "no_capture"]),
+        new Challenge("5分以内に", 30, 1.0, ["rta"], ["rta", "no_capture"]),
+        new Challenge("10分以内に", 20, 1.0, ["rta"], ["rta", "no_capture"]),
         new Challenge("15分以内に", 10, 1.0, ["rta"], ["rta", "no_capture"]),
+        new Challenge("20分以内に", 5, 1.0, ["rta"], ["rta", "no_capture"]),
         new Challenge("1乙もせずに", 5),
         new Challenge("敵前で肉焼きを成功させつつ", 10),
-        new Challenge("肉焼きを成功させつつ", 10),
         new Challenge("セクレトに乗ることなく", 10, 1.0, [], ["arena"]),
         new Challenge("装衣を着ることなく", 10),
         new Challenge("ターゲット外のモンスターも1匹狩りつつ", 10),
         new Challenge("全部位破壊を目指して", 5),
+        // new Challenge("語尾に「ニャ」を付けつつ", 1), //追加予定?
+        // new Challenge("お嬢様言葉で喋りつつ", 1), //追加予定?
+        // new Challenge("お爺さん言葉で喋りつつ", 1), //追加予定?
       ]);
 
       function choiceRandom (sequence, weights){

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="tikubonn">
+    <title>【MHWs】クエストチャレンジ・ジェネレータ</title>
+    <link href="data:image/png," rel="icon">
+    <style>
+      
+      html {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        padding: 1rem;
+        margin: 0;
+        background: #eee;
+        font-family: Arial, "BIZ UDGothic", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.6;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <p>
+      ページ更新の度に新しいクエストチャレンジが生成されます。<br>
+      生成された画像は右クリックからコピーすることで Discord にそのまま貼り付けることができます。
+    </p>
+
+    <img id="quest-background" src="img/background.jpg" width="0">
+    <script>
+
+      function combination (sequence, reptition){
+        if (1 < reptition){
+          return Array.prototype.concat.apply([], 
+            sequence.map((a, i) => 
+              combination(sequence.slice(i + 1), reptition -1).map((b) => [a].concat(b)))
+          );
+        }
+        else {
+          return sequence.map((n) => [n]);
+        }
+      }
+
+      class Quest {
+        constructor (type, name, costCapacity, weight, tags){
+          this.type = type;
+          this.name = name;
+          this.costCapacity = costCapacity;
+          this.weight = weight || 1.0;
+          this.tags = new Set(tags || []);
+        }
+      }
+
+      const EVENT_QUESTS = [
+        new Quest("イベントクエスト", "東方の鐘冴ゆ道は凍えけり", 5, 6.0, ["no_capture", "arena"]),
+        new Quest("イベントクエスト", "特殊任務・ゴグマジオスの討伐", 5, 1.0, ["no_capture", "arena"]),
+        new Quest("イベントクエスト", "黒き揺り篭の吾子", 5, 6.0),
+        new Quest("イベントクエスト", "楼蘭の睥睨者", 5, 6.0),
+        new Quest("イベントクエスト", "天人達のエルピス", 5, 6.0, ["no_capture", "arena"]),
+        new Quest("イベントクエスト", "トゥオネラの番人より告ぐ", 5, 6.0),
+        new Quest("イベントクエスト", "孤独から出でし君という自由", 5, 6.0),
+        new Quest("イベントクエスト", "零式オメガプラネテス検証戦", 10, 6.0, ["no_capture", "arena"]),
+        new Quest("イベントクエスト", "ジュデッカの心臓", 10, 3.0, ["no_capture", "arena"]),
+        new Quest("イベントクエスト", "狼藉なるものの武弁", 20, 3.0),
+        new Quest("イベントクエスト", "咎は戦禍に睡臥する", 10, 3.0, ["no_capture", "arena"]),
+        new Quest("イベントクエスト", "闇き漁火よ、呪われてあれ", 10, 3.0),
+        new Quest("イベントクエスト", "無言の閃耀", 10, 3.0),
+        new Quest("イベントクエスト", "漣の古き都に眠れば愛し", 10, 3.0),
+        new Quest("イベントクエスト", "快気怪鳥の快進撃", 20),
+        new Quest("イベントクエスト", "調伏の獣", 20),
+        new Quest("イベントクエスト", "白髭妍哉", 20),
+        new Quest("イベントクエスト", "暴れん坊、ここに極まれり", 20),
+        new Quest("イベントクエスト", "王と私は眩闇を知る", 20),
+        new Quest("イベントクエスト", "閃電猛りて、その粋やよし!", 20),
+        new Quest("イベントクエスト", "天滄無窮", 20, 1.0, ["arena"]),
+        new Quest("イベントクエスト", "長いものには巻かれてござれ", 20, 1.0, ["arena"]),
+        new Quest("イベントクエスト", "狂威の食うか食われるか", 20),
+        new Quest("イベントクエスト", "大好物は鉱石です！！", 20, 1.0, ["arena"]),
+        new Quest("イベントクエスト", "痺れる森の野獣", 20),
+        new Quest("イベントクエスト", "ハンター達の永い夢", 20, 1.0, ["arena"]),
+        new Quest("イベントクエスト", "霜烈のホワイトアウト", 20, 1.0, ["arena"]),
+        new Quest("イベントクエスト", "竜都の中心で肉を焦がした者", 20),
+        new Quest("イベントクエスト", "光彩陸離の輝きよ！", 20),
+        new Quest("イベントクエスト", "主亡き爪", 20),
+        new Quest("イベントクエスト", "ぬるい光は私に不要", 20),
+        new Quest("イベントクエスト", "異国の空と王", 20),
+        new Quest("イベントクエスト", "解き放たれた兇爪", 20),
+        new Quest("イベントクエスト", "燃えろ、ネイキッドボディ", 20),
+        new Quest("イベントクエスト", "その閃光は私に効かない", 20),
+        new Quest("イベントクエスト", "収棘のエニグマ", 20),
+        new Quest("イベントクエスト", "白い暴れん坊、手に負えない", 20),
+        new Quest("イベントクエスト", "白き王子の豪勇魂", 20),
+        new Quest("イベントクエスト", "千の光はすべて刃", 20),
+        new Quest("イベントクエスト", "碧落に咆を奏でたり", 20),
+        new Quest("イベントクエスト", "蛮行容貌", 20),
+        new Quest("イベントクエスト", "桃色気分が私を焦がす", 20),
+        new Quest("イベントクエスト", "哀愁と暴虐の白き獣", 20),
+        new Quest("イベントクエスト", "封印を解いた暴れん坊", 20),
+        new Quest("イベントクエスト", "その舌はとても強情", 20),
+        new Quest("イベントクエスト", "バヨネットが踊る雨", 20),
+        new Quest("イベントクエスト", "砂傷だらけの荒者魂", 20),
+        new Quest("イベントクエスト", "桃毛達も歌う恋歌", 20),
+        new Quest("イベントクエスト", "森の覇者、それはイャンクック", 20),
+        new Quest("イベントクエスト", "狂おしくもププロポル", 20),
+        new Quest("イベントクエスト", "豊穣清浄、怪鳥上々", 20),
+        new Quest("イベントクエスト", "毒をもって毒が二倍", 20),
+        new Quest("イベントクエスト", "三人寄ればケマトリス！", 20, 1.0, ["arena"]),
+        new Quest("イベントクエスト", "カラボスの娘達", 20),
+        new Quest("イベントクエスト", "ヒラバミ達の収穫祭", 20),
+        new Quest("イベントクエスト", "炎尾竜はいつ歌う？", 20),
+        new Quest("イベントクエスト", "砂がくれにし夜半の火影", 20),
+        new Quest("イベントクエスト", "七色のかばね", 20, 1.0, ["no_capture"]),
+        new Quest("イベントクエスト", "暗闇からケミーコス", 20),
+        new Quest("イベントクエスト", "螺旋とうねりの試運転", 20),
+        // new Quest("イベントクエスト", "ププロポルは泣いてない", 5), //開催終了?
+        // new Quest("イベントクエスト", "極熱重鎧グラビモス", 20, 1.0, ["arena"]), //開催終了?
+        // new Quest("イベントクエスト", "ババコンガ、垂涎のアレを好む", 20), //開催終了?
+        // new Quest("イベントクエスト", "晩飯時のイグニッション", 20), //開催終了?
+        // new Quest("イベントクエスト", "隠れ場所は油断の隙間", 20), //開催予定?
+        // new Quest("イベントクエスト", "影蜘蛛、頂を歩く", 20), //開催予定?
+      ];
+
+      const FREE_QUESTS = [
+        new Quest("フリークエスト", "英雄の証", 5, 1.0, ["no_capture", "arena"]),
+        new Quest("フリークエスト", "命焦がす者達のタンゴ", 5,["no_capture"]),
+        new Quest("フリークエスト", "緋水に浮かぶセレナーデ", 5, ["no_capture"]),
+        new Quest("フリークエスト", "風と砂と悠久のブルース", 5, ["no_capture"]),
+        new Quest("フリークエスト", "彷徨える侵略兵器", 10, 1.0, ["no_capture", "arena"]),
+        new Quest("フリークエスト", "不完全な影", 20, 1.0, ["no_capture", "arena"]),
+        new Quest("フリークエスト", "狩猟演習 歴戦セルレギオス", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦ウズトゥナ", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦アルシュベルド", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦ゴアマガラ", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦タマミツネ", 20, 0.1),
+        new Quest("フリークエスト", "道を蝕み戻らぬ者よ", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦リオレウス", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦ジンダハド", 20, 0.1, ["no_capture", "arena"]),
+        new Quest("フリークエスト", "狩猟演習 歴戦ヌエグドラ", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦レダウ", 20, 0.1),
+        new Quest("フリークエスト", "狩猟演習 歴戦ラギアクルス", 20, 0.1),
+        new Quest("フリークエスト", "あやめもわかぬ暗病に", 20, 0.1),
+        new Quest("フリークエスト", "命の鎖", 40, 0.1),
+        new Quest("フリークエスト", "生存競争の果てに", 40, 0.1),
+        new Quest("フリークエスト", "奈落の嗤笑", 40, 0.1),
+        new Quest("フリークエスト", "千の刃を陽が照らす", 40, 0.1),
+        new Quest("フリークエスト", "厄介な妨害者たち", 40, 0.1),
+        new Quest("フリークエスト", "断崖に木霊して", 40, 0.1),
+        new Quest("フリークエスト", "深淵の霧、昏く生を蝕む", 40, 0.1),
+        new Quest("フリークエスト", "黄塵万丈、主来たりなば", 40, 0.1),
+        new Quest("フリークエスト", "そのヴェール、重量級につき", 40, 0.1),
+        new Quest("フリークエスト", "狩人の渡りせむ地に霜降らば", 40, 0.1, ["no_capture", "arena"]),
+        new Quest("フリークエスト", "大海より、王いずる", 40, 0.1),
+        new Quest("フリークエスト", "鬼哭白啾", 40, 0.1),
+        new Quest("フリークエスト", "ヴェルナーの実証実験", 40, 0.1),
+        new Quest("フリークエスト", "くれない泡のうたかた華に", 40, 0.1),
+        new Quest("フリークエスト", "煩悶滅す迦楼羅炎", 40, 0.1),
+        new Quest("フリークエスト", "闢獣の狩猟", 40, 0.1),
+        new Quest("フリークエスト", "あまねく天は王者の下に", 40, 0.1),
+        new Quest("フリークエスト", "ちゃっかりぶんどりサポート", 40, 0.1),
+        new Quest("フリークエスト", "相反する秩序", 40, 0.1),
+        new Quest("フリークエスト", "護竜アンジャナフ亜種の狩猟", 40, 0.1),
+        new Quest("フリークエスト", "諍いの果てに", 40, 0.1),
+        new Quest("フリークエスト", "管理不行き届きにはご用心", 40, 0.1),
+        new Quest("フリークエスト", "適応のかたち", 40, 0.1),
+        new Quest("フリークエスト", "門衛として", 40, 0.1),
+        new Quest("フリークエスト", "虚王の凱旋", 40, 0.1),
+        new Quest("フリークエスト", "白の小羽根", 40, 0.1),
+        new Quest("フリークエスト", "毛並みが悪くなる。嫌いです。", 40, 0.1),
+        new Quest("フリークエスト", "雪獅子遊山", 40, 0.1),
+        new Quest("フリークエスト", "守るべきもの", 40, 0.1),
+        new Quest("フリークエスト", "白き闢獣大立廻り！", 40, 0.1),
+        new Quest("フリークエスト", "歴戦の沙海竜", 40, 0.1),
+        new Quest("フリークエスト", "斯く山高く鎧えども", 40, 0.1),
+        new Quest("フリークエスト", "加工屋印の特注品", 40, 0.1),
+        new Quest("フリークエスト", "歴戦の沙海竜", 40, 0.1),
+        new Quest("フリークエスト", "屁を放って尻を振る", 40, 0.1),
+        new Quest("フリークエスト", "永遠の眠りを誘う花よ", 40, 0.1),
+        new Quest("フリークエスト", "影蜘蛛の狩り場", 40, 0.1),
+        new Quest("フリークエスト", "二度と離さぬ誓いを立てて", 40, 0.1),
+        new Quest("フリークエスト", "異端の存在", 40, 0.1),
+        new Quest("フリークエスト", "ネコ式火竜艇出撃", 40, 0.1),
+        new Quest("フリークエスト", "ロイヤルアイルーの探しもの", 40, 0.1),
+        new Quest("フリークエスト", "竜谷の安全確保", 40, 0.1),
+        new Quest("フリークエスト", "噴き出す毒彩", 40, 0.1),
+        new Quest("フリークエスト", "あまねく大地女王を擁し", 40, 0.1),
+        new Quest("フリークエスト", "ランゴスタ狂想曲", 40, 0.1),
+
+        //...
+
+      ];
+
+      const ALL_QUESTS = Array.prototype.concat.apply([], [
+        EVENT_QUESTS,
+        FREE_QUESTS,
+      ]);
+
+      class Challenge {
+        constructor (message, cost, weight, tags, excludeTags){
+          this.message = message;
+          this.cost = cost;
+          this.weight = weight || 1.0;
+          this.tags = new Set(tags || []);
+          this.excludeTags = new Set(excludeTags || []);
+        }
+      }
+
+      let all_challenges = [];
+
+      const WEAPONS = [
+        "豪鬼",
+        "大剣",
+        "太刀",
+        "片手剣",
+        "双剣",
+        "ハンマー",
+        "狩猟笛",
+        "ランス",
+        "ガンランス",
+        "スラッシュアックス",
+        "チャージアックス",
+        "操虫棍",
+        "ライトボウガン",
+        "ヘビィボウガン",
+        "弓",
+      ];
+
+      const WEAPON_CATEGORIES = [
+        "近接武器",
+        "遠距離武器",
+      ];
+
+      WEAPONS.forEach((weapon) => {
+        all_challenges.push(new Challenge(weapon + "を担いで", 20, 0.25, ["weapon"], ["weapon"]));
+      });
+
+      combination(WEAPONS, 2).forEach((weapons) => {
+        let [weapon, weapon2] = weapons;
+        all_challenges.push(new Challenge(weapon + "もしくは" + weapon2 + "を担いで", 10, 0.5, ["weapon"], ["weapon"]));
+      });
+
+      WEAPON_CATEGORIES.forEach((weaponCategory) => {
+        all_challenges.push(new Challenge(weaponCategory + "を担いで", 5, 1.0, ["weapon"], ["weapon"]));
+      });
+
+      all_challenges = all_challenges.concat([
+        new Challenge("魚釣りを成功させつつ", 5, 0.5, [], ["arena"]),
+        new Challenge("魚釣り(大物)を成功させつつ", 10, 0.25, [], ["arena"]),
+        new Challenge("鉱石採掘もしつつ", 1, 1.0, [], ["arena"]),
+        new Challenge("虫取りもしつつ", 1, 1.0, [], ["arena"]),
+        new Challenge("ハチミツ集めもしつつ", 1, 1.0, [], ["arena"]),
+        new Challenge("卵運びもしつつ", 10, 0.25, [], ["arena"]),
+        new Challenge("可能ならば捕獲狙いで", 10, 1.0, [], ["no_capture"]),
+        new Challenge("5分以内に", 20, 1.0, ["rta"], ["rta", "no_capture"]),
+        new Challenge("10分以内に", 10, 1.0, ["rta"], ["rta", "no_capture"]),
+        new Challenge("15分以内に", 10, 1.0, ["rta"], ["rta", "no_capture"]),
+        new Challenge("1乙もせずに", 5),
+        new Challenge("敵前で肉焼きを成功させつつ", 10),
+        new Challenge("肉焼きを成功させつつ", 10),
+        new Challenge("セクレトに乗ることなく", 10, 1.0, [], ["arena"]),
+        new Challenge("装衣を着ることなく", 10),
+        new Challenge("ターゲット外のモンスターも1匹狩りつつ", 10),
+        new Challenge("全部位破壊を目指して", 5),
+      ]);
+
+      function choiceRandom (sequence, weights){
+        if (0 < sequence.length){
+          let ws = weights || sequence.map(() => 1.0);
+          let totalWeight = ws.reduce((a, b) => a + b);
+          let accWeights = ws.map((_, i) => ws.slice(0, i + 1).reduce((a, b) => a + b));
+          let rand = Math.random() * totalWeight;
+          for (let i = 0; i < sequence.length; i++){
+            if (rand < accWeights[i]){
+              return sequence[i];
+            }
+          }
+          return sequence[0];
+        }
+        else {
+          throw new Error(sequence); //tmp.
+        }
+      }
+
+      function choiceRandomChallenges (quest, maxCount, challenges){
+        let count = Math.round(1 + Math.random() * (maxCount -1));
+        let curCostCapacity = quest.costCapacity;
+        let choosenChallenges = [];
+        let choosenTags = new Set(quest.tags);
+        for (let i = 0; i < count; i++){
+          let avaliableChallenges = challenges.filter((c) => 
+            !choosenChallenges.includes(c) && 
+            choosenTags.intersection(c.excludeTags).size == 0 && 
+            c.cost <= curCostCapacity
+          );
+          if (0 < avaliableChallenges.length){
+            let challenge = choiceRandom(avaliableChallenges, avaliableChallenges.map((c) => c.weight));
+            challenge.tags.keys().forEach((tag) => {
+              choosenTags.add(tag);
+            });
+            choosenChallenges.push(challenge);
+            curCostCapacity -= challenge.cost;
+          }
+        }
+        return choosenChallenges;
+      }
+
+      class IRenderable {
+
+        render (context, x, y){
+        }
+
+        calc_height (){
+          throw new Error(); //tmp.
+        }
+
+      }
+
+      class Text extends IRenderable {
+
+        constructor (text, family, size, color){
+          super();
+          this.text = text 
+          this.family = family 
+          this.size = size 
+          this.color = color
+        }
+
+        render (context, x, y){
+          context.font = `bold ${this.size}px ${this.family}`;
+          context.textAlign = "center";
+          context.textBaseline = "top";
+          context.fillStyle = "#000";
+
+          const SAMPLE_COUNT = 12;
+          const BORDER_WEIGHT = 2;
+
+          for (let i = 0; i < SAMPLE_COUNT; i++){
+            let rad = (i / (SAMPLE_COUNT -1.0) * Math.PI * 2.0);
+            context.fillText(
+              this.text, 
+              x + Math.sin(rad) * BORDER_WEIGHT, 
+              y + Math.cos(rad) * BORDER_WEIGHT
+            );
+          }
+
+          context.fillStyle = this.color
+          context.fillText(this.text, x, y);
+        }
+
+        calc_height (){
+          return this.size;
+        }
+
+      }
+
+      class Gap extends IRenderable {
+
+        constructor (size){
+          super();
+          this.size = size;
+        }
+
+        render (context, x, y){
+        }
+
+        calc_height (){
+          return this.size;
+        }
+
+      }
+
+      function render (context, renderables){
+        totalHeight = renderables.map((a) => a.calc_height()).reduce((a, b) => a + b);
+        let x = 640 / 2.0;
+        let y = 480 / 2.0 - totalHeight / 2.0;
+        for (let renderable of renderables){
+          renderable.render(context, x, y);
+          y += renderable.calc_height();
+        }
+      }
+
+      const FONT_FAMILY = "Meiryo";
+
+      function imageGenerate (callback){
+        let background = document.getElementById("quest-background");
+        let canvas = document.createElement("canvas");
+        canvas.width = 640;
+        canvas.height = 480;
+        let context = canvas.getContext("2d");
+        let choosenQuest = choiceRandom(ALL_QUESTS);
+        let choosenChallenges = choiceRandomChallenges(choosenQuest, 3, all_challenges);
+        let renderables = [];
+        renderables = renderables.concat([
+          new Text(choosenQuest.type, FONT_FAMILY, 16, "#ff0"),
+          new Gap(8),
+          new Text(`「${choosenQuest.name}」を`, FONT_FAMILY, 32, "#ff0"),
+          new Gap(24),
+        ]);
+        choosenChallenges.forEach((c) => {
+          renderables.push(new Text(c.message, FONT_FAMILY, 24, "#fff"));
+          renderables.push(new Gap(8));
+        });
+        renderables = renderables.concat([
+          new Text("狩ってください！", FONT_FAMILY, 24, "#fff"),
+        ]);
+        context.drawImage(background, 0, 0, 640, 480);
+        render(context, renderables);
+        let image = new Image();
+        image.src = canvas.toDataURL();
+        image.addEventListener("load", () => {
+          callback(image);
+        });
+      }
+
+      window.addEventListener("load", () => {
+        imageGenerate((image) => {
+          document.body.appendChild(image);
+        });
+      });
+
+    </script>
+    <!-- © 2026 tikubonn -->
+  </body>
+</html>

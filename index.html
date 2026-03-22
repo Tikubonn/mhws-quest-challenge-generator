@@ -250,11 +250,11 @@
       });
 
       all_challenges = all_challenges.concat([
-        new Challenge("魚釣りを成功させつつ", 5, 0.5, [], ["arena"]),
-        new Challenge("魚釣り(大物)を成功させつつ", 10, 0.25, [], ["arena"]),
-        new Challenge("鉱石採掘もしつつ", 1, 1.0, [], ["arena"]),
-        new Challenge("虫取りもしつつ", 1, 1.0, [], ["arena"]),
-        new Challenge("ハチミツ採取もしつつ", 1, 1.0, [], ["arena"]),
+        //new Challenge("魚釣りを成功させつつ", 5, 0.5, [], ["arena"]),
+        //new Challenge("魚釣り(大物)を成功させつつ", 10, 0.25, [], ["arena"]),
+        //new Challenge("鉱石採掘もしつつ", 1, 1.0, [], ["arena"]),
+        //new Challenge("虫取りもしつつ", 1, 1.0, [], ["arena"]),
+        //new Challenge("ハチミツ採取もしつつ", 1, 1.0, [], ["arena"]),
         // new Challenge("卵運びもしつつ", 10, 0.25, [], ["arena"]),
         new Challenge("可能ならば捕獲狙いで", 10, 1.0, [], ["no_capture"]),
         new Challenge("可能ならば討伐狙いで", 10, 1.0, [], ["no_capture"]),
@@ -263,10 +263,10 @@
         new Challenge("15分以内に", 10, 1.0, ["rta"], ["rta", "no_capture"]),
         new Challenge("20分以内に", 5, 1.0, ["rta"], ["rta", "no_capture"]),
         new Challenge("1乙もせずに", 5),
-        new Challenge("敵前で肉焼きを成功させつつ", 10),
-        new Challenge("セクレトに乗ることなく", 10, 1.0, [], ["arena"]),
-        new Challenge("装衣を着ることなく", 10),
-        new Challenge("ターゲット外のモンスターも1匹狩りつつ", 10),
+        //new Challenge("敵前で肉焼きを成功させつつ", 10),
+        //new Challenge("セクレトに乗ることなく", 10, 1.0, [], ["arena"]),
+        //new Challenge("装衣を着ることなく", 10),
+        //new Challenge("ターゲット外のモンスターも1匹狩りつつ", 10),
         new Challenge("全部位破壊を目指して", 5),
         // new Challenge("語尾に「ニャ」を付けつつ", 1), //追加予定?
         // new Challenge("お嬢様言葉で喋りつつ", 1), //追加予定?
@@ -337,12 +337,13 @@
 
         render (context, x, y){
           context.font = `bold ${this.size}px ${this.family}`;
+          context.fontFeatureSettings = "palt";
           context.textAlign = "center";
           context.textBaseline = "top";
           context.fillStyle = "#000";
 
-          const SAMPLE_COUNT = 12;
-          const BORDER_WEIGHT = 2;
+          const SAMPLE_COUNT = 32;
+          const BORDER_WEIGHT = 3;
 
           for (let i = 0; i < SAMPLE_COUNT; i++){
             let rad = (i / (SAMPLE_COUNT -1.0) * Math.PI * 2.0);
@@ -379,16 +380,17 @@
 
       }
 
-      function render (context, renderables){
+      function render (context, renderables, y){
         totalHeight = renderables.map((a) => a.calc_height()).reduce((a, b) => a + b);
         let x = 640 / 2.0;
-        let y = 480 / 2.0 - totalHeight / 2.0;
+        let y2 = y - totalHeight / 2.0;
         for (let renderable of renderables){
-          renderable.render(context, x, y);
-          y += renderable.calc_height();
+          renderable.render(context, x, y2);
+          y2 += renderable.calc_height();
         }
       }
 
+      // const FONT_FAMILY = "Meiryo";
       const FONT_FAMILY = "Meiryo";
 
       function imageGenerate (callback){
@@ -411,10 +413,10 @@
           renderables.push(new Gap(8));
         });
         renderables = renderables.concat([
-          new Text("狩ってください！", FONT_FAMILY, 24, "#fff"),
+          new Text("クリアしてください!!", FONT_FAMILY, 24, "#fff"),
         ]);
         context.drawImage(background, 0, 0, 640, 480);
-        render(context, renderables);
+        render(context, renderables, 280);
         let image = new Image();
         image.src = canvas.toDataURL();
         image.addEventListener("load", () => {

@@ -1,0 +1,2365 @@
+[
+  {
+    "name": "ププロポルは泣いてない",
+    "tags": [
+      "rank10",
+      "event",
+      "unavailable",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ププロポル"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "東方の鐘冴ゆ道は凍えけり",
+    "tags": [
+      "rank10",
+      "event",
+      "map_touhou"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "歴戦王ジン・ダハド"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "特殊任務・ゴグマジオスの討伐",
+    "tags": [
+      "rank10",
+      "event",
+      "map_kaikyo"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "ゴグマジオス"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "黒き揺り篭の吾子",
+    "tags": [
+      "rank10",
+      "event",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "歴戦王ヌ・エグドラ"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "楼蘭の睥睨者",
+    "tags": [
+      "rank10",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "歴戦王レ・ダウ"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "英雄の証",
+    "tags": [
+      "rank10",
+      "free",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "shokushu"
+    ],
+    "targets": [
+      "歴戦王アルシュベルド",
+      "歴戦王ウズ・トゥナ",
+      "歴戦王ヌ・エグドラ",
+      "歴戦王レ・ダウ"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "天人達のエルピス",
+    "tags": [
+      "rank10",
+      "event",
+      "map_yashiro"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "ゾ・シア"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "トゥオネラの番人より告ぐ",
+    "tags": [
+      "rank10",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "歴戦王ウズ・トゥナ"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "孤独から出でし君という自由",
+    "tags": [
+      "rank10",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "歴戦王アルシュベルド"
+    ],
+    "cost_capacity": 5
+  },
+  {
+    "name": "狩猟演習 歴戦タマミツネ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "タマミツネ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦リオレウス",
+    "tags": [
+      "rank9",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "リオレウス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦レ・ダウ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "レ・ダウ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦ゴア・マガラ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ゴア・マガラ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦セルレギオス",
+    "tags": [
+      "rank9",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "セルレギオス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦ラギアクルス",
+    "tags": [
+      "rank9",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ラギアクルス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦ヌ・エグドラ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "ヌ・エグドラ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦ウズ・トゥナ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ウズ・トゥナ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "命焦がす者達のタンゴ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "shokushu"
+    ],
+    "targets": [
+      "アジャラカン",
+      "ヌ・エグドラ",
+      "リオレウス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦アルシュベルド",
+    "tags": [
+      "rank9",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アルシュベルド"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "風と砂と悠久のブルース",
+    "tags": [
+      "rank9",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "セルレギオス",
+      "ドシャグマ",
+      "レ・ダウ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狩猟演習 歴戦ジン・ダハド",
+    "tags": [
+      "rank9",
+      "free",
+      "map_touhou"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "ジン・ダハド"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "緋水に浮かぶセレナーデ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "ウズ・トゥナ",
+      "タマミツネ",
+      "ラギアクルス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "調伏の獣",
+    "tags": [
+      "rank9",
+      "event",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アジャラカン"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "零式オメガ・プラネテス検証戦",
+    "tags": [
+      "rank9",
+      "event",
+      "map_touhou"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "零式オメガ・プラネテス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "ジュデッカの心臓",
+    "tags": [
+      "rank9",
+      "event",
+      "map_touhou"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "歴戦王ジン・ダハド"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "狼藉なるものの武弁",
+    "tags": [
+      "rank9",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドシャグマ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "快気怪鳥の快進撃",
+    "tags": [
+      "rank9",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "イャンクック"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "咎は戦禍に睡臥する",
+    "tags": [
+      "rank9",
+      "event",
+      "map_kaikyo"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "ゴグマジオス"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "闇き漁火よ、呪われてあれ",
+    "tags": [
+      "rank9",
+      "event",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "歴戦王ヌ・エグドラ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "白髭妍哉",
+    "tags": [
+      "rank9",
+      "event",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドドブランゴ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "道を蝕み戻らぬ者よ",
+    "tags": [
+      "rank9",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ゴア・マガラ"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "暴れん坊、ここに極まれり",
+    "tags": [
+      "rank9",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜アンジャナフ亜種"
+    ],
+    "cost_capacity": 10
+  },
+  {
+    "name": "彷徨える侵略兵器",
+    "tags": [
+      "rank8",
+      "free",
+      "map_touhou"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "オメガ・プラネテス"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "無言の閃耀",
+    "tags": [
+      "rank8",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "歴戦王レ・ダウ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "漣の古き都に眠れば愛し",
+    "tags": [
+      "rank8",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "歴戦王ウズ・トゥナ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "王と私は眩闇を知る",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜リオレウス",
+      "リオレウス"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "閃電猛りて、その粋やよし!",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ラギアクルス",
+      "レ・ダウ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "天滄無窮",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ラギアクルス",
+      "リオレウス"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "長いものには巻かれてござれ",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "タマミツネ",
+      "バーラハーラ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "狂威の食うか食われるか",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "geryosu"
+    ],
+    "targets": [
+      "ゲリョス",
+      "ネルスキュラ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "大好物は鉱石です！！",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "グラビモス",
+      "グラビモス"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "痺れる森の野獣",
+    "tags": [
+      "rank8",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドシャグマ",
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "あやめもわかぬ暗病に",
+    "tags": [
+      "rank8",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "map_dangai",
+      "no_tail"
+    ],
+    "targets": [
+      "イャンクック",
+      "イャンクック",
+      "ドドブランゴ",
+      "ネルスキュラ",
+      "ネルスキュラ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "ハンター達の永い夢",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス",
+      "ケマトリス",
+      "ケマトリス",
+      "ケマトリス",
+      "タマミツネ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "霜烈のホワイトアウト",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドドブランゴ",
+      "ドドブランゴ",
+      "ドドブランゴ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "竜都の中心で肉を焦がした者",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス",
+      "リオレウス"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "光彩陸離の輝きよ！",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "geryosu"
+    ],
+    "targets": [
+      "ゲリョス",
+      "レ・ダウ"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "主亡き爪",
+    "tags": [
+      "rank8",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜オドガロン亜種"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "ぬるい光は私に不要",
+    "tags": [
+      "rank8",
+      "event",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "geryosu"
+    ],
+    "targets": [
+      "ゲリョス"
+    ],
+    "cost_capacity": 20
+  },
+  {
+    "name": "不完全な影",
+    "tags": [
+      "rank7",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ネルスキュラ・クローン"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "命の鎖",
+    "tags": [
+      "rank7",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アルシュベルド"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "狩人の渡りせむ地に霜降らば",
+    "tags": [
+      "rank6",
+      "free",
+      "map_touhou"
+    ],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "targets": [
+      "ジン・ダハド"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "極熱重鎧グラビモス",
+    "tags": [
+      "rank6",
+      "event",
+      "unavailable",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "グラビモス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "深淵の霧、昏く生を蝕む",
+    "tags": [
+      "rank6",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ゴア・マガラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "厄介な妨害者たち",
+    "tags": [
+      "rank6",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アジャラカン",
+      "グラビモス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "そのヴェール、重量級につき",
+    "tags": [
+      "rank6",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ウズ・トゥナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "生存競争の果てに",
+    "tags": [
+      "rank6",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "shokushu"
+    ],
+    "targets": [
+      "シーウー",
+      "護竜オドガロン亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "断崖に木霊して",
+    "tags": [
+      "rank6",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドドブランゴ",
+      "ヒラバミ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "黄塵万丈、主来たりなば",
+    "tags": [
+      "rank6",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "レ・ダウ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "千の刃を陽が照らす",
+    "tags": [
+      "rank6",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "セルレギオス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "奈落の嗤笑",
+    "tags": [
+      "rank6",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "ヌ・エグドラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "大海より、王いずる",
+    "tags": [
+      "rank6",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ラギアクルス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "異国の空と王",
+    "tags": [
+      "rank6",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜リオレウス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "解き放たれた兇爪",
+    "tags": [
+      "rank6",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜オドガロン亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "燃えろ、ネイキッドボディ",
+    "tags": [
+      "rank6",
+      "event",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "ヌ・エグドラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "その閃光は私に効かない",
+    "tags": [
+      "rank6",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "シーウー"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "収棘のエニグマ",
+    "tags": [
+      "rank6",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "シーウー"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "白い暴れん坊、手に負えない",
+    "tags": [
+      "rank6",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜アンジャナフ亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "白き王子の豪勇魂",
+    "tags": [
+      "rank6",
+      "event",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドドブランゴ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "千の光はすべて刃",
+    "tags": [
+      "rank6",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "セルレギオス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "諍いの果てに",
+    "tags": [
+      "rank5",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス",
+      "リオレイア"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "白き闢獣大立廻り！",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "護竜ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "虚王の凱旋",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜リオレウス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "斯く山高く鎧えども",
+    "tags": [
+      "rank5",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "グラビモス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "毛並みが悪くなる。嫌いです。",
+    "tags": [
+      "rank5",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ババコンガ",
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "門衛として",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アジャラカン"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "白の小羽根",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜セクレト"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "くれない泡のうたかた華に",
+    "tags": [
+      "rank5",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "タマミツネ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "管理不行き届きにはご用心",
+    "tags": [
+      "rank5",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "グラビモス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "煩悶滅す迦楼羅炎",
+    "tags": [
+      "rank5",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アジャラカン"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "相反する秩序",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"      
+    ],
+    "targets": [
+      "シーウー"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "闢獣の狩猟",
+    "tags": [
+      "rank5",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ちゃっかりぶんどりサポート",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜オドガロン亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "守るべきもの",
+    "tags": [
+      "rank5",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドドブランゴ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "歴戦の沙海竜",
+    "tags": [
+      "rank5",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "バーラハーラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ヴェルナーの実証実験",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "護竜ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "雪獅子遊山",
+    "tags": [
+      "rank5",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドドブランゴ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "あまねく天は王者の下に",
+    "tags": [
+      "rank5",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "リオレウス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "適応のかたち",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "シーウー"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "護竜アンジャナフ亜種の狩猟",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜アンジャナフ亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "鬼哭白啾",
+    "tags": [
+      "rank5",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜オドガロン亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "隠れ場所は油断の隙間",
+    "tags": [
+      "rank5",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "シーウー"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "碧落に咆を奏でたり",
+    "tags": [
+      "rank5",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "リオレウス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "蛮行容貌",
+    "tags": [
+      "rank5",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "桃色気分が私を焦がす",
+    "tags": [
+      "rank5",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ババコンガ",
+      "リオレイア"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "哀愁と暴虐の白き獣",
+    "tags": [
+      "rank5",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "護竜ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "封印を解いた暴れん坊",
+    "tags": [
+      "rank5",
+      "event",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜アンジャナフ亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "その舌はとても強情",
+    "tags": [
+      "rank5",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "チャタカブラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "バヨネットが踊る雨",
+    "tags": [
+      "rank5",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "砂傷だらけの荒者魂",
+    "tags": [
+      "rank5",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "桃毛達も歌う恋歌",
+    "tags": [
+      "rank5",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ババコンガ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "森の覇者、それはイャンクック",
+    "tags": [
+      "rank5",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "イャンクック"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "怪毒ぞめき",
+    "tags": [
+      "rank4",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "geryosu"
+    ],
+    "targets": [
+      "ゲリョス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "夢食う虫も好き好き",
+    "tags": [
+      "rank4",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ネマラチカ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "噴き出す毒彩",
+    "tags": [
+      "rank4",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ププロポル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "幽鬼祓いへ行こう！",
+    "tags": [
+      "rank4",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ブブラチカ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "一反風靡",
+    "tags": [
+      "rank4",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ヒラバミ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "加工屋印の特注品",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "屁を放って尻を振る",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ババコンガ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "竜谷の安全確保",
+    "tags": [
+      "rank4",
+      "free",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ヒラバミ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "頑固一徹、石頭！",
+    "tags": [
+      "rank4",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "クラノダス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ワザモノ・ギャング",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ピラギル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "砂の竜、大海を知らず",
+    "tags": [
+      "rank4",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "バーラハーラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ランゴスタ狂想曲",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ランゴスタ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "永遠の眠りを誘う花よ",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "二度と離さぬ誓いを立てて",
+    "tags": [
+      "rank4",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "タリオス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ババコンガ、垂涎のアレを好む",
+    "tags": [
+      "rank4",
+      "event",
+      "unavailable",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ババコンガ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "晩飯時のイグニッション",
+    "tags": [
+      "rank4",
+      "event",
+      "unavailable",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "あまねく大地女王を擁し",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "リオレイア"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "影蜘蛛の狩り場",
+    "tags": [
+      "rank4",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ネルスキュラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "追って追われて炎の尾",
+    "tags": [
+      "rank4",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "異端の存在",
+    "tags": [
+      "rank4",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "イャンクック"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "蛙鳴蛙噪",
+    "tags": [
+      "rank4",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "チャタカブラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ネコ式火竜艇出撃",
+    "tags": [
+      "rank4",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "狂おしくもププロポル",
+    "tags": [
+      "rank4",
+      "event",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ププロポル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "影蜘蛛、頂を歩く",
+    "tags": [
+      "rank4",
+      "event",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ネルスキュラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "豊穣清浄、怪鳥上々",
+    "tags": [
+      "rank4",
+      "event",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "イャンクック"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "毒をもって毒が二倍",
+    "tags": [
+      "rank4",
+      "event",
+      "no_tail",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "geryosu"
+    ],
+    "targets": [
+      "ゲリョス",
+      "ププロポル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "三人寄ればケマトリス！",
+    "tags": [
+      "rank4",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "カラボスの娘達",
+    "tags": [
+      "rank4",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ヒラバミ達の収穫祭",
+    "tags": [
+      "rank4",
+      "event",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ヒラバミ",
+      "ヒラバミ",
+      "ヒラバミ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ロイヤルアイルーの探しもの",
+    "tags": [
+      "rank4",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [],
+    "cost_capacity": 40
+  },
+  {
+    "name": "炎尾竜はいつ歌う？",
+    "tags": [
+      "rank4",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "砂がくれにし夜半の火影",
+    "tags": [
+      "rank4",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "リオレイア"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "七色のかばね",
+    "tags": [
+      "rank4",
+      "event",
+      "map_atochi"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "???"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "這いずる焔",
+    "tags": [
+      "rank3",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "ヌ・エグドラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "護竜オドガロン亜種の狩猟",
+    "tags": [
+      "rank3",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜オドガロン亜種"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "滅せぬ王のあるべきか",
+    "tags": [
+      "rank3",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "護竜リオレウス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "嘆きの白夜叉",
+    "tags": [
+      "rank3",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "護竜ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "虚ろ喰らう腕",
+    "tags": [
+      "rank3",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_tail",
+      "shokushu"
+    ],
+    "targets": [
+      "シーウー"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "君は白き羽を伸ばして",
+    "tags": [
+      "rank3",
+      "free",
+      "map_atogata"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "護竜セクレト"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "影は踊る",
+    "tags": [
+      "rank2",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ネルスキュラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "ひらりひらりと飛来して",
+    "tags": [
+      "rank2",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ヒラバミ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "断崖にも虫はいる",
+    "tags": [
+      "rank2",
+      "free",
+      "map_dangai"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ネマラチカ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "襲い来る波衣",
+    "tags": [
+      "rank2",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ウズ・トゥナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "赫猿の咆哮",
+    "tags": [
+      "rank2",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "アジャラカン"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "クラノダス行進曲",
+    "tags": [
+      "rank2",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "クラノダス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "平沙万里を統べる閃",
+    "tags": [
+      "rank2",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "レ・ダウ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "油涌き谷のガス爆発",
+    "tags": [
+      "rank2",
+      "free",
+      "map_yuwaki"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ププロポル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "暗闇からケミーコス",
+    "tags": [
+      "rank2",
+      "event",
+      "no_tail",
+      "map_yuwaki"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ププロポル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "森のドシャグマ、無法者",
+    "tags": [
+      "rank1",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ドシャグマ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "綺麗な花には...",
+    "tags": [
+      "rank1",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ラバラ・バリナ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "火元にはケマトリス",
+    "tags": [
+      "rank1",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "ケマトリス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "緋の森にも虫はいる",
+    "tags": [
+      "rank1",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ランゴスタ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "砂海のうねり",
+    "tags": [
+      "rank1",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "バーラハーラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "砂原にも虫はいる",
+    "tags": [
+      "rank1",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ブブラチカ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "桃色騒動",
+    "tags": [
+      "rank1",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "ババコンガ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "チャタカブラにご用心",
+    "tags": [
+      "rank1",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_tail"
+    ],
+    "targets": [
+      "チャタカブラ"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "キレモノ・ギャング",
+    "tags": [
+      "rank1",
+      "free",
+      "map_mori"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "ピラギル"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "歯応え求めて砂原へ！",
+    "tags": [
+      "rank1",
+      "free",
+      "map_hedate"
+    ],
+    "additional_tags": [
+      "no_capture",
+      "no_tail"
+    ],
+    "targets": [
+      "タリオス"
+    ],
+    "cost_capacity": 40
+  },
+  {
+    "name": "螺旋とうねりの試運転",
+    "tags": [
+      "rank1",
+      "event",
+      "map_hedate"
+    ],
+    "additional_tags": [],
+    "targets": [
+      "バーラハーラ"
+    ],
+    "cost_capacity": 40
+  }
+]

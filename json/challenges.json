@@ -1,0 +1,1615 @@
+[
+  {
+    "name": "近接武器で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 5,
+    "weight": 0.5
+  },
+  {
+    "name": "遠距離武器で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 5,
+    "weight": 0.5
+  },
+  {
+    "name": "大剣・太刀で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・片手剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・双剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・ハンマーで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・狩猟笛で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・片手剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・双剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・ハンマーで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・狩猟笛で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "太刀・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・双剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・ハンマーで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・狩猟笛で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "片手剣・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・ハンマーで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・狩猟笛で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "双剣・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・狩猟笛で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ハンマー・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "狩猟笛・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ランス・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ガンランス・スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ガンランス・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ガンランス・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ガンランス・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ガンランス・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ガンランス・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "スラッシュアックス・チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "スラッシュアックス・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "スラッシュアックス・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "スラッシュアックス・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "スラッシュアックス・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "チャージアックス・操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "チャージアックス・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "チャージアックス・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "チャージアックス・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "操虫棍・ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "操虫棍・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "操虫棍・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ライトボウガン・ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ライトボウガン・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "ヘビィボウガン・弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 10,
+    "weight": 0.0095
+  },
+  {
+    "name": "大剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "太刀で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "片手剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "双剣で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "ハンマーで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "狩猟笛で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "ランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "ガンランスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "スラッシュアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "チャージアックスで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "操虫棍で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "ライトボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "ヘビィボウガンで",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "弓で",
+    "tags": [
+      "weapon_limit"
+    ],
+    "additional_tags": [
+      "no_weapon_limit"
+    ],
+    "exclusive_tags": [
+      "no_weapon_limit"
+    ],
+    "cost": 20,
+    "weight": 0.0714
+  },
+  {
+    "name": "捕獲を目指して",
+    "tags": [],
+    "additional_tags": [
+      "capture"
+    ],
+    "exclusive_tags": [
+      "capture",
+      "no_capture"
+    ],
+    "cost": 5,
+    "weight": 0.5
+  },
+  {
+    "name": "討伐を目指して",
+    "tags": [],
+    "additional_tags": [
+      "no_capture"
+    ],
+    "exclusive_tags": [
+      "capture",
+      "no_capture"
+    ],
+    "cost": 5,
+    "weight": 0.5
+  },
+  {
+    "name": "30分以内に",
+    "tags": [],
+    "additional_tags": [
+      "time_limit"
+    ],
+    "exclusive_tags": [
+      "time_limit"
+    ],
+    "cost": 5,
+    "weight": 0.33
+  },
+  {
+    "name": "20分以内に",
+    "tags": [],
+    "additional_tags": [
+      "time_limit"
+    ],
+    "exclusive_tags": [
+      "time_limit"
+    ],
+    "cost": 10,
+    "weight": 0.33
+  },
+  {
+    "name": "10分以内に",
+    "tags": [],
+    "additional_tags": [
+      "time_limit"
+    ],
+    "exclusive_tags": [
+      "time_limit"
+    ],
+    "cost": 20,
+    "weight": 0.33
+  },
+  {
+    "name": "尻尾切断を目指して",
+    "tags": [],
+    "additional_tags": [
+      "tail"
+    ],
+    "exclusive_tags": [
+      "tail",
+      "no_tail"
+    ],
+    "cost": 5,
+    "weight": 1.0
+  },
+  {
+    "name": "触手切断を目指して",
+    "tags": [
+      "shokushu"
+    ],
+    "additional_tags": [
+      "no_shokushu"
+    ],
+    "exclusive_tags": [
+      "no_shokushu"
+    ],
+    "cost": 5,
+    "weight": 1.0
+  },
+  {
+    "name": "生きたまま剥ぎ取りもして",
+    "tags": [
+      "geryosu"
+    ],
+    "additional_tags": [
+      "no_geryosu"
+    ],
+    "exclusive_tags": [
+      "no_geryosu"
+    ],
+    "cost": 10,
+    "weight": 1.0
+  },
+  {
+    "name": "力尽きることなく",
+    "tags": [],
+    "additional_tags": [
+      "no_death_limit"
+    ],
+    "exclusive_tags": [
+      "no_death_limit"
+    ],
+    "cost": 5,
+    "weight": 1.0
+  }
+]

@@ -5,318 +5,361 @@
     <meta name="author" content="tikubonn">
     <title>【MHWilds】クエスト・チャレンジ・ジェネレータ</title>
     <link href="data:image/png," rel="icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-64UC4BEhTGwk3eGpak4nO2jqtl7liTS+juXkSJ2gPAQPmlClQO7s5UgCeR6US48g" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
       
-      html {
-        padding: 0;
-        margin: 0;
-      }
-
-      body {
-        padding: 1rem;
-        margin: 0;
-        background: #f3f3f3;
-        font-family: Arial, "BIZ UDGothic", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.6;
-        color: #222;
+      img#image-result {
+        width: 100%;
+        height: auto;
       }
 
     </style>
   </head>
   <body>
-
-    <p>
-      ページ更新の度に新しいクエスト・チャレンジが生成されます。<br>
-      生成された画像は右クリックからコピーすることで Discord にそのまま貼り付けることができます。
-    </p>
-
-    <p>
-      ※画像を再抽選するには F5 キー等による画面更新を行ってください。
-    </p>
-
     <img id="quest-background" src="img/background.jpg" width="0">
+    <div class="container">
+      <h1>クエスト・チャレンジ・ジェネレータ</h1>
+      <p>
+        右下にある「画像を生成する」ボタンを押すことで、条件に合致するランダムなクエスト画像を作成してくれます。<br>
+        生成された画像は<b>右クリックでコピーすことで Discord にそのまま貼り付けることができます。</b>
+      </p>
+      <p>
+        ひとつ前のバージョンをご利用したい方は<a href="prev-version.html">こちらのページ</a>をどうぞ。
+      </p>
+      <div class="row">
+
+        <!-- image preview -->
+
+        <div class="col">
+          <p id="image-out">
+            <img src="img/waiting.jpg" id="image-result">
+          </p>
+        </div>
+
+        <!-- image params -->
+
+        <div class="col">
+          <div class="row gy-4 mb-4">
+
+            <!-- クエスト難易度 -->
+
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  クエスト難易度
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank10" id="tag-rank10" checked>
+                    <label class="form-check-label" for="tag-rank10">
+                      &starf;10
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank9" id="tag-rank9" checked>
+                    <label class="form-check-label" for="tag-rank9">
+                      &starf;9
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank8" id="tag-rank8">
+                    <label class="form-check-label" for="tag-rank8">
+                      &starf;8
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank7" id="tag-rank7">
+                    <label class="form-check-label" for="tag-rank7">
+                      &starf;7
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank6" id="tag-rank6">
+                    <label class="form-check-label" for="tag-rank6">
+                      &starf;6
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank5" id="tag-rank5">
+                    <label class="form-check-label" for="tag-rank5">
+                      &starf;5
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank4" id="tag-rank4">
+                    <label class="form-check-label" for="tag-rank4">
+                      &starf;4
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank3" id="tag-rank3">
+                    <label class="form-check-label" for="tag-rank3">
+                      &starf;3
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank2" id="tag-rank2">
+                    <label class="form-check-label" for="tag-rank2">
+                      &starf;2
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="rank1" id="tag-rank1">
+                    <label class="form-check-label" for="tag-rank1">
+                      &starf;1
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- フィールド -->
+
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  フィールド
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_hedate" id="tag-map-hedate" checked>
+                    <label class="form-check-label" for="tag-map-hedate">
+                      隔ての砂原
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_mori" id="tag-map-mori" checked>
+                    <label class="form-check-label" for="tag-map-mori">
+                      緋の森
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_yuwaki" id="tag-map-yuwaki" checked>
+                    <label class="form-check-label" for="tag-map-yuwaki">
+                      油涌き谷
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_dangai" id="tag-map-dangai" checked>
+                    <label class="form-check-label" for="tag-map-dangai">
+                      氷霧の断崖
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_touhou" id="tag-map-touhou" checked>
+                    <label class="form-check-label" for="tag-map-touhou">
+                      氷鎖の凍峰
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_atogata" id="tag-map-atogata" checked>
+                    <label class="form-check-label" for="tag-map-atogata">
+                      竜都の跡形
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_atochi" id="tag-map-atochi" checked>
+                    <label class="form-check-label" for="tag-map-atochi">
+                      竜谷の跡地(闘技場)
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_yashiro" id="tag-map-yashiro" checked>
+                    <label class="form-check-label" for="tag-map-yashiro">
+                      龍灯の社(ゾ・シア)
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="map_kaikyo" id="tag-map-kaikyo" checked>
+                    <label class="form-check-label" for="tag-map-kaikyo">
+                      遺忘の械墟(ゴグマジオス)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- クエストの種類 -->
+
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  クエストの種類
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="event" id="tag-event" checked>
+                    <label class="form-check-label" for="tag-event">
+                      イベントクエスト
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="free" id="tag-free" checked>
+                    <label class="form-check-label" for="tag-free">
+                      フリークエスト
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- その他の設定 -->
+
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  その他の設定
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="unavailable" id="tag-unavailable">
+                    <label class="form-check-label" for="tag-unavailable">
+                      配信停止を含む
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="weapon_limit" id="tag-weapon-limit" checked>
+                    <label class="form-check-label" for="tag-weapon-limit">
+                      武器制限
+                    </label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="time_limit" id="tag-time-limit" checked>
+                    <label class="form-check-label" for="tag-time-limit">
+                      時間制限
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <button type="button" id="gen-image" class="btn btn-primary">
+                画像を生成する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-jdSIJTK9l6XwXj3RixpVDXtMcA2bFd9O81RlLAwhpr2oXRqvQP88rr16IeFXTgFE" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script>
 
-      function combination (sequence, reptition){
-        if (1 < reptition){
-          return Array.prototype.concat.apply([], 
-            sequence.map((a, i) => 
-              combination(sequence.slice(i + 1), reptition -1).map((b) => [a].concat(b)))
-          );
+      function loadTags (){
+        const INPUT_IDS = [
+          "tag-rank1",
+          "tag-rank2",
+          "tag-rank3",
+          "tag-rank4",
+          "tag-rank5",
+          "tag-rank6",
+          "tag-rank7",
+          "tag-rank8",
+          "tag-rank9",
+          "tag-rank10",
+          "tag-map-hedate",
+          "tag-map-mori",
+          "tag-map-yuwaki",
+          "tag-map-dangai",
+          "tag-map-touhou",
+          "tag-map-atogata",
+          "tag-map-atochi",
+          "tag-map-yashiro",
+          "tag-map-kaikyo",
+          "tag-event",
+          "tag-free",
+          "tag-unavailable",
+          "tag-weapon-limit",
+          "tag-time-limit",
+        ];
+        return new Set(
+          INPUT_IDS
+            .map((id) => {
+              let input = document.getElementById(id);
+              if (input != null){
+                return input.checked? input.value: "";
+              }
+              else {
+                throw new Error(id); //tmp.
+              }
+            })
+            .filter((value) => value)
+            .reduce((a, b) => a.concat(b), [])
+        );
+      }
+
+      function chooseQuest (allQuests, tags){
+        let availableQuests = allQuests.filter((quest) => {
+          return quest.tags.intersection(tags).size == quest.tags.size;
+        });
+        if (0 < availableQuests.length){
+          let index = Math.round((availableQuests.length -1) * Math.random());
+          return availableQuests[index];
         }
-        else {
-          return sequence.map((n) => [n]);
+        else{
+          alert("条件に一致するクエストが1つも見つかりませんでした。");
+          return null;
         }
       }
 
-      class Quest {
-        constructor (type, name, costCapacity, weight, tags){
-          this.type = type;
-          this.name = name;
-          this.costCapacity = costCapacity;
-          this.weight = weight || 1.0;
-          this.tags = new Set(tags || []);
-        }
-      }
-
-      const EVENT_QUESTS = [
-        new Quest("イベントクエスト", "東方の鐘冴ゆ道は凍えけり", 5, 6.0, ["no_capture", "arena"]),
-        new Quest("イベントクエスト", "特殊任務・ゴグマジオスの討伐", 5, 1.0, ["no_capture", "arena"]),
-        new Quest("イベントクエスト", "黒き揺り篭の吾子", 5, 6.0),
-        new Quest("イベントクエスト", "楼蘭の睥睨者", 5, 6.0),
-        new Quest("イベントクエスト", "天人達のエルピス", 5, 6.0, ["no_capture", "arena"]),
-        new Quest("イベントクエスト", "トゥオネラの番人より告ぐ", 5, 6.0),
-        new Quest("イベントクエスト", "孤独から出でし君という自由", 5, 6.0),
-        new Quest("イベントクエスト", "零式オメガプラネテス検証戦", 10, 6.0, ["no_capture", "arena"]),
-        new Quest("イベントクエスト", "ジュデッカの心臓", 10, 3.0, ["no_capture", "arena"]),
-        new Quest("イベントクエスト", "狼藉なるものの武弁", 20, 3.0),
-        new Quest("イベントクエスト", "咎は戦禍に睡臥する", 10, 3.0, ["no_capture", "arena"]),
-        new Quest("イベントクエスト", "闇き漁火よ、呪われてあれ", 10, 3.0),
-        new Quest("イベントクエスト", "無言の閃耀", 10, 3.0),
-        new Quest("イベントクエスト", "漣の古き都に眠れば愛し", 10, 3.0),
-        new Quest("イベントクエスト", "快気怪鳥の快進撃", 20),
-        new Quest("イベントクエスト", "調伏の獣", 20),
-        new Quest("イベントクエスト", "白髭妍哉", 20),
-        new Quest("イベントクエスト", "暴れん坊、ここに極まれり", 20),
-        new Quest("イベントクエスト", "王と私は眩闇を知る", 20),
-        new Quest("イベントクエスト", "閃電猛りて、その粋やよし!", 20),
-        new Quest("イベントクエスト", "天滄無窮", 20, 1.0, ["arena"]),
-        new Quest("イベントクエスト", "長いものには巻かれてござれ", 20, 1.0, ["arena"]),
-        new Quest("イベントクエスト", "狂威の食うか食われるか", 20),
-        new Quest("イベントクエスト", "大好物は鉱石です！！", 20, 1.0, ["arena"]),
-        new Quest("イベントクエスト", "痺れる森の野獣", 20),
-        new Quest("イベントクエスト", "ハンター達の永い夢", 20, 1.0, ["arena"]),
-        new Quest("イベントクエスト", "霜烈のホワイトアウト", 20, 1.0, ["arena"]),
-        new Quest("イベントクエスト", "竜都の中心で肉を焦がした者", 20),
-        new Quest("イベントクエスト", "光彩陸離の輝きよ！", 20),
-        new Quest("イベントクエスト", "主亡き爪", 20),
-        new Quest("イベントクエスト", "ぬるい光は私に不要", 20),
-        new Quest("イベントクエスト", "異国の空と王", 20),
-        new Quest("イベントクエスト", "解き放たれた兇爪", 20),
-        new Quest("イベントクエスト", "燃えろ、ネイキッドボディ", 20),
-        new Quest("イベントクエスト", "その閃光は私に効かない", 20),
-        new Quest("イベントクエスト", "収棘のエニグマ", 20),
-        new Quest("イベントクエスト", "白い暴れん坊、手に負えない", 20),
-        new Quest("イベントクエスト", "白き王子の豪勇魂", 20),
-        new Quest("イベントクエスト", "千の光はすべて刃", 20),
-        new Quest("イベントクエスト", "碧落に咆を奏でたり", 20),
-        new Quest("イベントクエスト", "蛮行容貌", 20),
-        new Quest("イベントクエスト", "桃色気分が私を焦がす", 20),
-        new Quest("イベントクエスト", "哀愁と暴虐の白き獣", 20),
-        new Quest("イベントクエスト", "封印を解いた暴れん坊", 20),
-        new Quest("イベントクエスト", "その舌はとても強情", 20),
-        new Quest("イベントクエスト", "バヨネットが踊る雨", 20),
-        new Quest("イベントクエスト", "砂傷だらけの荒者魂", 20),
-        new Quest("イベントクエスト", "桃毛達も歌う恋歌", 20),
-        new Quest("イベントクエスト", "森の覇者、それはイャンクック", 20),
-        new Quest("イベントクエスト", "狂おしくもププロポル", 20),
-        new Quest("イベントクエスト", "豊穣清浄、怪鳥上々", 20),
-        new Quest("イベントクエスト", "毒をもって毒が二倍", 20),
-        new Quest("イベントクエスト", "三人寄ればケマトリス！", 20, 1.0, ["arena"]),
-        new Quest("イベントクエスト", "カラボスの娘達", 20),
-        new Quest("イベントクエスト", "ヒラバミ達の収穫祭", 20),
-        new Quest("イベントクエスト", "炎尾竜はいつ歌う？", 20),
-        new Quest("イベントクエスト", "砂がくれにし夜半の火影", 20),
-        new Quest("イベントクエスト", "七色のかばね", 20, 1.0, ["no_capture"]),
-        new Quest("イベントクエスト", "暗闇からケミーコス", 20),
-        new Quest("イベントクエスト", "螺旋とうねりの試運転", 20),
-        // new Quest("イベントクエスト", "ププロポルは泣いてない", 5), //開催終了?
-        // new Quest("イベントクエスト", "極熱重鎧グラビモス", 20, 1.0, ["arena"]), //開催終了?
-        // new Quest("イベントクエスト", "ババコンガ、垂涎のアレを好む", 20), //開催終了?
-        // new Quest("イベントクエスト", "晩飯時のイグニッション", 20), //開催終了?
-        // new Quest("イベントクエスト", "隠れ場所は油断の隙間", 20), //開催予定?
-        // new Quest("イベントクエスト", "影蜘蛛、頂を歩く", 20), //開催予定?
-      ];
-
-      const FREE_QUESTS = [
-        new Quest("フリークエスト", "英雄の証", 5, 1.0, ["no_capture", "arena"]),
-        new Quest("フリークエスト", "命焦がす者達のタンゴ", 5,["no_capture"]),
-        new Quest("フリークエスト", "緋水に浮かぶセレナーデ", 5, ["no_capture"]),
-        new Quest("フリークエスト", "風と砂と悠久のブルース", 5, ["no_capture"]),
-        new Quest("フリークエスト", "彷徨える侵略兵器", 10, 1.0, ["no_capture", "arena"]),
-        new Quest("フリークエスト", "不完全な影", 20, 1.0, ["no_capture", "arena"]),
-        //new Quest("フリークエスト", "狩猟演習 歴戦セルレギオス", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦ウズトゥナ", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦アルシュベルド", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦ゴアマガラ", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦タマミツネ", 20, 0.1),
-        //new Quest("フリークエスト", "道を蝕み戻らぬ者よ", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦リオレウス", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦ジンダハド", 20, 0.1, ["no_capture", "arena"]),
-        //new Quest("フリークエスト", "狩猟演習 歴戦ヌエグドラ", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦レダウ", 20, 0.1),
-        //new Quest("フリークエスト", "狩猟演習 歴戦ラギアクルス", 20, 0.1),
-        //new Quest("フリークエスト", "あやめもわかぬ暗病に", 20, 0.1),
-        //new Quest("フリークエスト", "命の鎖", 40, 0.1),
-        //new Quest("フリークエスト", "生存競争の果てに", 40, 0.1),
-        //new Quest("フリークエスト", "奈落の嗤笑", 40, 0.1),
-        //new Quest("フリークエスト", "千の刃を陽が照らす", 40, 0.1),
-        //new Quest("フリークエスト", "厄介な妨害者たち", 40, 0.1),
-        //new Quest("フリークエスト", "断崖に木霊して", 40, 0.1),
-        //new Quest("フリークエスト", "深淵の霧、昏く生を蝕む", 40, 0.1),
-        //new Quest("フリークエスト", "黄塵万丈、主来たりなば", 40, 0.1),
-        //new Quest("フリークエスト", "そのヴェール、重量級につき", 40, 0.1),
-        //new Quest("フリークエスト", "狩人の渡りせむ地に霜降らば", 40, 0.1, ["no_capture", "arena"]),
-        //new Quest("フリークエスト", "大海より、王いずる", 40, 0.1),
-        //new Quest("フリークエスト", "鬼哭白啾", 40, 0.1),
-        //new Quest("フリークエスト", "ヴェルナーの実証実験", 40, 0.1),
-        //new Quest("フリークエスト", "くれない泡のうたかた華に", 40, 0.1),
-        //new Quest("フリークエスト", "煩悶滅す迦楼羅炎", 40, 0.1),
-        //new Quest("フリークエスト", "闢獣の狩猟", 40, 0.1),
-        //new Quest("フリークエスト", "あまねく天は王者の下に", 40, 0.1),
-        //new Quest("フリークエスト", "ちゃっかりぶんどりサポート", 40, 0.1),
-        //new Quest("フリークエスト", "相反する秩序", 40, 0.1),
-        //new Quest("フリークエスト", "護竜アンジャナフ亜種の狩猟", 40, 0.1),
-        //new Quest("フリークエスト", "諍いの果てに", 40, 0.1),
-        //new Quest("フリークエスト", "管理不行き届きにはご用心", 40, 0.1),
-        //new Quest("フリークエスト", "適応のかたち", 40, 0.1),
-        //new Quest("フリークエスト", "門衛として", 40, 0.1),
-        //new Quest("フリークエスト", "虚王の凱旋", 40, 0.1),
-        //new Quest("フリークエスト", "白の小羽根", 40, 0.1),
-        //new Quest("フリークエスト", "毛並みが悪くなる。嫌いです。", 40, 0.1),
-        //new Quest("フリークエスト", "雪獅子遊山", 40, 0.1),
-        //new Quest("フリークエスト", "守るべきもの", 40, 0.1),
-        //new Quest("フリークエスト", "白き闢獣大立廻り！", 40, 0.1),
-        //new Quest("フリークエスト", "歴戦の沙海竜", 40, 0.1),
-        //new Quest("フリークエスト", "斯く山高く鎧えども", 40, 0.1),
-        //new Quest("フリークエスト", "加工屋印の特注品", 40, 0.1),
-        //new Quest("フリークエスト", "歴戦の沙海竜", 40, 0.1),
-        //new Quest("フリークエスト", "屁を放って尻を振る", 40, 0.1),
-        //new Quest("フリークエスト", "永遠の眠りを誘う花よ", 40, 0.1),
-        //new Quest("フリークエスト", "影蜘蛛の狩り場", 40, 0.1),
-        //new Quest("フリークエスト", "二度と離さぬ誓いを立てて", 40, 0.1),
-        //new Quest("フリークエスト", "異端の存在", 40, 0.1),
-        //new Quest("フリークエスト", "ネコ式火竜艇出撃", 40, 0.1),
-        //new Quest("フリークエスト", "ロイヤルアイルーの探しもの", 40, 0.1),
-        //new Quest("フリークエスト", "竜谷の安全確保", 40, 0.1),
-        //new Quest("フリークエスト", "噴き出す毒彩", 40, 0.1),
-        //new Quest("フリークエスト", "あまねく大地女王を擁し", 40, 0.1),
-        //new Quest("フリークエスト", "ランゴスタ狂想曲", 40, 0.1),
-      ];
-
-      const ALL_QUESTS = Array.prototype.concat.apply([], [
-        EVENT_QUESTS,
-        FREE_QUESTS,
-      ]);
-
-      class Challenge {
-        constructor (message, cost, weight, tags, excludeTags){
-          this.message = message;
-          this.cost = cost;
-          this.weight = weight || 1.0;
-          this.tags = new Set(tags || []);
-          this.excludeTags = new Set(excludeTags || []);
-        }
-      }
-
-      let all_challenges = [];
-
-      const WEAPONS = [
-        "豪鬼",
-        "大剣",
-        "太刀",
-        "片手剣",
-        "双剣",
-        "ハンマー",
-        "狩猟笛",
-        "ランス",
-        "ガンランス",
-        "スラッシュアックス",
-        "チャージアックス",
-        "操虫棍",
-        "ライトボウガン",
-        "ヘビィボウガン",
-        "弓",
-      ];
-
-      const WEAPON_CATEGORIES = [
-        "近接武器",
-        "遠距離武器",
-      ];
-
-      WEAPONS.forEach((weapon) => {
-        all_challenges.push(new Challenge(`${weapon}で`, 20, 0.25, ["weapon"], ["weapon"]));
-      });
-
-      combination(WEAPONS, 2).forEach((weapons) => {
-        let [weapon, weapon2] = weapons;
-        all_challenges.push(new Challenge(`${weapon}・${weapon2}で`, 10, 0.5, ["weapon"], ["weapon"]));
-      });
-
-      WEAPON_CATEGORIES.forEach((weaponCategory) => {
-        all_challenges.push(new Challenge(weaponCategory + "を担いで", 5, 1.0, ["weapon"], ["weapon"]));
-      });
-
-      all_challenges = all_challenges.concat([
-        //new Challenge("魚釣りを成功させつつ", 5, 0.5, [], ["arena"]),
-        //new Challenge("魚釣り(大物)を成功させつつ", 10, 0.25, [], ["arena"]),
-        //new Challenge("鉱石採掘もしつつ", 1, 1.0, [], ["arena"]),
-        //new Challenge("虫取りもしつつ", 1, 1.0, [], ["arena"]),
-        //new Challenge("ハチミツ採取もしつつ", 1, 1.0, [], ["arena"]),
-        // new Challenge("卵運びもしつつ", 10, 0.25, [], ["arena"]),
-        new Challenge("可能ならば捕獲狙いで", 10, 1.0, [], ["no_capture"]),
-        new Challenge("可能ならば討伐狙いで", 10, 1.0, [], ["no_capture"]),
-        new Challenge("5分以内に", 30, 1.0, ["rta"], ["rta", "no_capture"]),
-        new Challenge("10分以内に", 20, 1.0, ["rta"], ["rta", "no_capture"]),
-        new Challenge("15分以内に", 10, 1.0, ["rta"], ["rta", "no_capture"]),
-        new Challenge("20分以内に", 5, 1.0, ["rta"], ["rta", "no_capture"]),
-        new Challenge("1乙もせずに", 5),
-        //new Challenge("敵前で肉焼きを成功させつつ", 10),
-        //new Challenge("セクレトに乗ることなく", 10, 1.0, [], ["arena"]),
-        //new Challenge("装衣を着ることなく", 10),
-        //new Challenge("ターゲット外のモンスターも1匹狩りつつ", 10),
-        new Challenge("全部位破壊を目指して", 5),
-        // new Challenge("語尾に「ニャ」を付けつつ", 1), //追加予定?
-        // new Challenge("お嬢様言葉で喋りつつ", 1), //追加予定?
-        // new Challenge("お爺さん言葉で喋りつつ", 1), //追加予定?
-      ]);
-
-      function choiceRandom (sequence, weights){
+      function chooseRandom (sequence, weights){ //重み付けを用いた無作為抽出を行います
         if (0 < sequence.length){
-          let ws = weights || sequence.map(() => 1.0);
-          let totalWeight = ws.reduce((a, b) => a + b);
-          let accWeights = ws.map((_, i) => ws.slice(0, i + 1).reduce((a, b) => a + b));
-          let rand = Math.random() * totalWeight;
-          for (let i = 0; i < sequence.length; i++){
-            if (rand < accWeights[i]){
-              return sequence[i];
-            }
+          let totalWeight = weights.reduce((a, b) => a + b, 0.0);
+          let accWeights = weights.map((_, i) => weights.slice(0, i + 1).reduce((a, b) => a + b, 0.0));
+          let rand = totalWeight * Math.random();
+          let index = accWeights.findIndex((acc) => rand <= acc);
+          if (0 <= index){
+            return sequence[index];
           }
-          return sequence[0];
+          else {
+            return sequence[0];
+          }
         }
         else {
-          throw new Error(sequence); //tmp.
+          throw Error(sequence); //tmp.
         }
       }
 
-      function choiceRandomChallenges (quest, maxCount, challenges){
-        let count = Math.round(1 + Math.random() * (maxCount -1));
-        let curCostCapacity = quest.costCapacity;
-        let choosenChallenges = [];
-        let choosenTags = new Set(quest.tags);
-        for (let i = 0; i < count; i++){
-          let avaliableChallenges = challenges.filter((c) => 
-            !choosenChallenges.includes(c) && 
-            choosenTags.intersection(c.excludeTags).size == 0 && 
-            c.cost <= curCostCapacity
+      function chooseChallenge (allChallenges, quest, tags, costCapacity){
+        let unifiedTags = quest.additional_tags.union(tags);
+        let availableChallenges = allChallenges.filter((challenge) => {
+          return challenge.tags.intersection(unifiedTags).size == challenge.tags.size && challenge.exclusive_tags.intersection(unifiedTags).size == 0 && challenge.cost <= costCapacity;
+        });
+        if (0 < availableChallenges.length){
+          return chooseRandom(
+            availableChallenges, 
+            availableChallenges.map((challenge) => challenge.weight)
           );
-          if (0 < avaliableChallenges.length){
-            let challenge = choiceRandom(avaliableChallenges, avaliableChallenges.map((c) => c.weight));
-            challenge.tags.keys().forEach((tag) => {
-              choosenTags.add(tag);
-            });
-            choosenChallenges.push(challenge);
-            curCostCapacity -= challenge.cost;
-          }
         }
-        return choosenChallenges;
+        else{
+          return null;
+        }
+      }
+
+      function chooseChallenges (allChallenges, quest, tags, maxCount){
+        let curCostCapacity = quest.cost_capacity;
+        let curTags = new Set(tags);
+        let count = Math.round(maxCount * Math.random());
+        return (new Array(count))
+          .fill(null)
+          .map(() => {
+            let challenge = chooseChallenge(allChallenges, quest, curTags, curCostCapacity);
+            if (challenge != null){
+              curCostCapacity -= challenge.cost;
+              curTags = curTags.union(challenge.additional_tags);
+              return challenge;
+            }
+            else {
+              return null;
+            }
+          })
+          .filter((challenge) => challenge);
       }
 
       class IRenderable {
 
-        render (context, x, y){
+        async render (context, x, y){
         }
 
         calc_height (){
@@ -335,7 +378,7 @@
           this.color = color
         }
 
-        render (context, x, y){
+        async render (context, x, y){
           context.font = `bold ${this.size}px ${this.family}`;
           context.fontFeatureSettings = "palt";
           context.textAlign = "center";
@@ -364,6 +407,53 @@
 
       }
 
+      class Targets extends IRenderable {
+
+        constructor (targets){
+          super();
+          this.targets = targets;
+        }
+
+        async render (context, x, y){
+          let offsetX = (100 * this.targets.length) / 2.0 + (100 / 2.0);
+          return Promise.all(
+            this.targets.map((target) => {
+              return new Promise((resolve, reject) => {
+                let image = new Image();
+                if (iconTable.hasOwnProperty(target)){
+                  var url = iconTable[target];
+                }
+                else {
+                  var url = iconTable["???"];
+                }
+                image.src = url;
+                image.addEventListener("load", () => {
+                  resolve(image);
+                });
+                image.addEventListener("error", (event) => {
+                  reject(event);
+                });
+              });
+            })
+          ).then((images) => {
+            images.forEach((image, i) => {
+              context.drawImage(
+                image, 
+                x + i * 100 + (100 / 2.0) - offsetX,
+                y,
+                100,
+                100
+              );
+            });
+          });
+        }
+
+        calc_height (){
+          return 100;
+        }
+
+      }
+
       class Gap extends IRenderable {
 
         constructor (size){
@@ -371,7 +461,7 @@
           this.size = size;
         }
 
-        render (context, x, y){
+        async render (context, x, y){
         }
 
         calc_height (){
@@ -380,43 +470,52 @@
 
       }
 
-      function render (context, renderables, y){
+      async function render (context, renderables, y){
         totalHeight = renderables.map((a) => a.calc_height()).reduce((a, b) => a + b);
         let x = 640 / 2.0;
         let y2 = y - totalHeight / 2.0;
         for (let renderable of renderables){
-          renderable.render(context, x, y2);
+          await renderable.render(context, x, y2);
           y2 += renderable.calc_height();
         }
       }
 
-      // const FONT_FAMILY = "Meiryo";
       const FONT_FAMILY = "Meiryo";
 
-      function imageGenerate (callback){
+      async function imageGenerate (callback){
         let background = document.getElementById("quest-background");
         let canvas = document.createElement("canvas");
         canvas.width = 640;
         canvas.height = 480;
         let context = canvas.getContext("2d");
-        let choosenQuest = choiceRandom(ALL_QUESTS);
-        let choosenChallenges = choiceRandomChallenges(choosenQuest, 3, all_challenges);
         let renderables = [];
+        let tags = loadTags();
+        let quest = chooseQuest(allQuests, tags);
+        let challenges = chooseChallenges(allChallenges, quest, tags, 2);
+        if (0 < quest.targets.length){
+          targets = new Targets(quest.targets);
+          renderables = renderables.concat([
+            targets,
+            new Gap(24),
+          ]);
+        }
         renderables = renderables.concat([
-          new Text(choosenQuest.type, FONT_FAMILY, 16, "#ff0"),
+          new Text(quest.tags.has("event")? "イベントクエスト": quest.tags.has("free")? "フリークエスト": "", FONT_FAMILY, 16, "#ff0"),
           new Gap(8),
-          new Text(`「${choosenQuest.name}」を`, FONT_FAMILY, 32, "#ff0"),
+        ]);
+        renderables = renderables.concat([
+          new Text(`「${quest.name}」を`, FONT_FAMILY, 32, "#ff0"),
           new Gap(24),
         ]);
-        choosenChallenges.forEach((c) => {
-          renderables.push(new Text(c.message, FONT_FAMILY, 24, "#fff"));
+        challenges.forEach((challenge) => {
+          renderables.push(new Text(challenge.name, FONT_FAMILY, 24, "#fff"));
           renderables.push(new Gap(8));
         });
         renderables = renderables.concat([
           new Text("クリアしてください!!", FONT_FAMILY, 24, "#fff"),
         ]);
         context.drawImage(background, 0, 0, 640, 480);
-        render(context, renderables, 285);
+        await render(context, renderables, 285);
         let image = new Image();
         image.src = canvas.toDataURL();
         image.addEventListener("load", () => {
@@ -424,9 +523,47 @@
         });
       }
 
+      let allQuests = [];
+      let allChallenges = [];
+      let iconTable = {};
+
+      function loadJSONs (){
+        return Promise.all([
+          fetch("json/quests.json").then(async (response) => {
+            allQuests = await response.json();
+            allQuests = allQuests.map((quest) => {
+              quest.tags = new Set(quest.tags);
+              quest.additional_tags = new Set(quest.additional_tags);
+              return quest;
+            });
+          }),
+          fetch("json/challenges.json").then(async (response) => {
+            allChallenges = await response.json();
+            allChallenges = allChallenges.map((challenge) => {
+              challenge.tags = new Set(challenge.tags);
+              challenge.additional_tags = new Set(challenge.additional_tags);
+              challenge.exclusive_tags = new Set(challenge.exclusive_tags);
+              return challenge;
+            });
+          }),
+          fetch("json/icons.json").then(async (response) => {
+            iconTable = await response.json();
+          }),
+        ]);
+      }
+
       window.addEventListener("load", () => {
-        imageGenerate((image) => {
-          document.body.appendChild(image);
+        loadJSONs().then(() => {
+          let button = document.getElementById("gen-image");
+          button.addEventListener("click", async (event) => {
+            event.preventDefault();
+            await imageGenerate((image) => {
+              image.id = "image-result";
+              let divImageOut = document.getElementById("image-out");
+              Array.from(divImageOut.childNodes).forEach((node) => node.parentNode.removeChild(node));
+              divImageOut.appendChild(image);
+            });
+          });
         });
       });
 

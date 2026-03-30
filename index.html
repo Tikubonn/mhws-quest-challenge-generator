@@ -365,11 +365,13 @@
 
       class IRenderable {
 
-        async render (context, x, y){
+        render (context, coord){ //return void.
         }
 
-        calc_height (){
-          throw new Error(); //tmp.
+        calcHeight (){ //return Number.
+        }
+
+        async load (){ //return Promise.
         }
 
       }
@@ -384,22 +386,25 @@
           this.color = color
         }
 
-        async render (context, x, y){
+        static SAMPLE_COUNT = 32;
+        static BORDER_WEIGHT = 3;
+
+        render (context, coord){
+          let [x, y] = coord;
           context.font = `bold ${this.size}px ${this.family}`;
           context.fontFeatureSettings = "palt";
           context.textAlign = "center";
           context.textBaseline = "top";
-          context.fillStyle = "#000";
 
-          const SAMPLE_COUNT = 32;
-          const BORDER_WEIGHT = 3;
+          //draw border.
 
-          for (let i = 0; i < SAMPLE_COUNT; i++){
-            let rad = (i / (SAMPLE_COUNT -1.0) * Math.PI * 2.0);
+          for (let i = 0; i < this.constructor.SAMPLE_COUNT; i++){
+            let rad = (i / (this.constructor.SAMPLE_COUNT -1.0) * Math.PI * 2.0);
+            context.fillStyle = "#000";
             context.fillText(
               this.text, 
-              x + Math.sin(rad) * BORDER_WEIGHT, 
-              y + Math.cos(rad) * BORDER_WEIGHT
+              x + Math.sin(rad) * this.constructor.BORDER_WEIGHT, 
+              y + Math.cos(rad) * this.constructor.BORDER_WEIGHT
             );
           }
 
@@ -407,8 +412,12 @@
           context.fillText(this.text, x, y);
         }
 
-        calc_height (){
+        calcHeight (){
           return this.size;
+        }
+
+        async load (){
+          return await Promise.resolve(null);
         }
 
       }
@@ -418,44 +427,58 @@
         constructor (targets){
           super();
           this.targets = targets;
+          this.images = []; 
         }
 
-        async render (context, x, y){
-          let offsetX = (100 * this.targets.length) / 2.0 + (100 / 2.0);
-          return Promise.all(
-            this.targets.map((target) => {
+        static IMAGE_SIZE = [100, 100];
+
+        render (context, coord){
+          let [x, y] = coord;
+          const [width, height] = this.constructor.IMAGE_SIZE;
+          let offsetX = (width * this.targets.length) / 2.0 + (width / 2.0);
+          this.images.forEach((image, index) => {
+            context.drawImage(
+              image, 
+              x + index * width + (width / 2.0) - offsetX,
+              y,
+              width,
+              height
+            );
+          });
+        }
+
+        calcHeight (){
+          const [width, height] = this.constructor.IMAGE_SIZE;
+          return height;
+        }
+
+        async load (){
+          return await Promise.all(
+            this.targets.map((target, index) => {
               return new Promise((resolve, reject) => {
-                let image = new Image();
+                let url;
                 if (iconTable.hasOwnProperty(target)){
-                  var url = iconTable[target];
+                  url = iconTable[target];
+                }
+                else 
+                if (iconTable.hasOwnProperty("???")){
+                  url = iconTable["???"];
                 }
                 else {
-                  var url = iconTable["???"];
+                  throw new Error(target); //tmp.
                 }
+                let image = new Image();
                 image.src = url;
                 image.addEventListener("load", () => {
-                  resolve(image);
+                  this.images[index] = image;
+                  resolve(null);
                 });
                 image.addEventListener("error", (event) => {
                   reject(event);
                 });
               });
             })
-          ).then((images) => {
-            images.forEach((image, i) => {
-              context.drawImage(
-                image, 
-                x + i * 100 + (100 / 2.0) - offsetX,
-                y,
-                100,
-                100
-              );
-            });
-          });
-        }
-
-        calc_height (){
-          return 100;
+          );
         }
 
       }
@@ -467,64 +490,56 @@
           this.size = size;
         }
 
-        async render (context, x, y){
+        render (context, coord){
         }
 
-        calc_height (){
+        calcHeight (){
           return this.size;
+        }
+
+        async load (){
+          return await Promise.resolve(null);
         }
 
       }
 
       async function render (context, renderables, y){
-        let x = 640 / 2.0;
-        let curY = y;
-        for (let renderable of renderables){
-          await renderable.render(context, x, curY);
-          curY += renderable.calc_height();
-        }
+        return await Promise.all(
+          renderables.map((renderable) => renderable.load())
+        )
+          .then(() => {
+            let x = context.canvas.width / 2.0;
+            let curY = y;
+            renderables.forEach((renderable) => {
+              renderable.render(context, [x, curY]);
+              curY += renderable.calcHeight();
+            });
+          })
+          .catch((error) => {
+            console.error("Load renderables failed", error);
+          });
       }
 
-      const FONT_FAMILY = "Meiryo";
-
-      async function imageGenerate (callback){
-        let background = document.getElementById("quest-background");
+      async function drawCanvas (size, drawFunc){ //return Promise.
+        let [width, height] = size;
         let canvas = document.createElement("canvas");
-        canvas.width = 640;
-        canvas.height = 480;
+        canvas.width = width;
+        canvas.height = height;
         let context = canvas.getContext("2d");
-        let renderables = [];
-        let tags = loadTags();
-        let quest = chooseQuest(allQuests, tags);
-        let challenges = chooseChallenges(allChallenges, quest, tags, 2);
-        if (0 < quest.targets.length){
-          targets = new Targets(quest.targets);
-          renderables = renderables.concat([
-            targets,
-            new Gap(24),
-          ]);
-        }
-        renderables = renderables.concat([
-          new Text(quest.tags.has("event")? "イベントクエスト": quest.tags.has("free")? "フリークエスト": "", FONT_FAMILY, 16, "#ff0"),
-          new Gap(8),
-        ]);
-        renderables = renderables.concat([
-          new Text(`「${quest.name}」を`, FONT_FAMILY, 32, "#ff0"),
-          new Gap(24),
-        ]);
-        challenges.forEach((challenge) => {
-          renderables.push(new Text(challenge.name, FONT_FAMILY, 24, "#fff"));
-          renderables.push(new Gap(8));
-        });
-        renderables = renderables.concat([
-          new Text("クリアしてください!!", FONT_FAMILY, 24, "#fff"),
-        ]);
-        context.drawImage(background, 0, 0, 640, 480);
-        await render(context, renderables, 120);
-        let image = new Image();
-        image.src = canvas.toDataURL();
-        image.addEventListener("load", () => {
-          callback(image);
+        await drawFunc(context);
+        return canvas;
+      }
+
+      async function drawImage (size, drawFunc){
+        return await new Promise((resolve, reject) => {
+          drawCanvas(size, drawFunc)
+            .then((canvas) => {
+              let image = new Image();
+              image.src = canvas.toDataURL();
+              image.addEventListener("load", () => resolve(image));
+              image.addEventListener("error", (event) => reject(event));
+            })
+            .catch((error) => reject(error));
         });
       }
 
@@ -557,17 +572,59 @@
         ]);
       }
 
+      const FONT_FAMILY = "Meiryo";
+
       window.addEventListener("load", () => {
         loadJSONs().then(() => {
           let button = document.getElementById("gen-image");
-          button.addEventListener("click", async (event) => {
+          button.addEventListener("click", (event) => {
             event.preventDefault();
-            await imageGenerate((image) => {
-              image.id = "image-result";
-              let divImageOut = document.getElementById("image-out");
-              Array.from(divImageOut.childNodes).forEach((node) => node.parentNode.removeChild(node));
-              divImageOut.appendChild(image);
-            });
+            drawImage([640, 480], async (context) => {
+              let background = document.getElementById("quest-background");
+              let tags = loadTags();
+              let quest = chooseQuest(allQuests, tags);
+              let challenges = chooseChallenges(allChallenges, quest, tags, 2);
+              let renderables = [];
+              if (0 < quest.targets.length){
+                targets = new Targets(quest.targets);
+                renderables = renderables.concat([
+                  targets,
+                  new Gap(24),
+                ]);
+              }
+              renderables = renderables.concat([
+                new Text(quest.tags.has("event")? "イベントクエスト": quest.tags.has("free")? "フリークエスト": "", FONT_FAMILY, 16, "#ff0"),
+                new Gap(8),
+              ]);
+              renderables = renderables.concat([
+                new Text(`「${quest.name}」を`, FONT_FAMILY, 32, "#ff0"),
+                new Gap(24),
+              ]);
+              challenges.forEach((challenge) => {
+                renderables.push(new Text(challenge.name, FONT_FAMILY, 24, "#fff"));
+                renderables.push(new Gap(8));
+              });
+              renderables = renderables.concat([
+                new Text("クリアしてください!!", FONT_FAMILY, 24, "#fff"),
+              ]);
+              context.drawImage(
+                background, 
+                0, 
+                0, 
+                context.canvas.width, 
+                context.canvas.height
+              );
+              await render(context, renderables, 120);
+            })
+              .then((image) => {
+                image.id = "image-result";
+                let divImageOut = document.getElementById("image-out");
+                Array.from(divImageOut.childNodes).forEach((node) => node.parentNode.removeChild(node));
+                divImageOut.appendChild(image);
+              })
+              .catch((error) => {
+                console.error("drawImage failed", error);
+              });
           });
         });
       });
